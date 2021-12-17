@@ -1,0 +1,34 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Admin {% endblock %}
+
+{% block content %}
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-12">
+          <div class="card card-profile">
+              <div class="card-body">
+                  <h4 class="card-title">
+                      <form action="/index" method="POST" enctype="multipart/form-data">
+                          Select image to upload:
+                          <br>
+                          <input id='inputfile' type='file' name='inputfile' class='form-control'>
+                          <br>
+                          <textarea class="form-control" type="text" name="comment" placeholder = "enter js" value="" id=''></textarea>
+                          <br>
+                          <input class="form-control" type="text" name="person" placeholder = "enter receiver" value="" id=''>
+                          <br>
+                          <input type="submit" value="submit" class='btn btn-primary btn-round'>
+                      </form>
+                  </h4>
+              </div>
+          </div>
+      </div>
+  </div>
+  </body>
+</html>
+{% endblock content %}
