@@ -100,7 +100,7 @@ def getCodeFromImage(img):
 def index():
     conn = sqlite3.connect('db.sqlite3')
     cur = conn.cursor()
-    cur.execute('create table if not exists Hash (comment text, hashed text);')
+    cur.execute('create table if not exists Image (sender text, receiver text, name text);')
     cur.execute('create table if not exists Hash (comment text, hashed text);')
     conn.close()
     if str(current_user) == 'admin':
