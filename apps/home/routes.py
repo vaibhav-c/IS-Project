@@ -98,6 +98,11 @@ def getCodeFromImage(img):
 @blueprint.route('/index', methods=['GET', 'POST'])
 @login_required
 def index():
+    conn = sqlite3.connect('db.sqlite3')
+    cur = conn.cursor()
+    cur.execute('create table if not exists Hash (comment text, hashed text);')
+    cur.execute('create table if not exists Hash (comment text, hashed text);')
+    conn.close()
     if str(current_user) == 'admin':
         if(request.method == 'POST'):
             if 'inputfile' in request.files:
