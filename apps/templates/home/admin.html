@@ -5,9 +5,13 @@
 {% block content %}
 <html>
   <head>
-    <title>Dashboard</title>
+    <title></title>
   </head>
   <body>
+    <a href="{{ url_for('authentication_blueprint.logout') }}" >
+      <i class="tim-icons icon-button-power"></i>
+      <p>Logout</p>
+    </a>
     <div class="row">
       <div class="col-md-12">
           <div class="card card-profile">
